@@ -1,6 +1,35 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/kcthomas/Makers/projects/bookmarks/spec/bookmark_list_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kcthomas/Makers/projects/bookmarks/lib/bookmark_list.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/kcthomas/Makers/projects/bookmarks/spec/features/test_infrastructure_spec.rb": {
         "lines": [
           1,
@@ -22,6 +51,6 @@
         ]
       }
     },
-    "timestamp": 1603121290
+    "timestamp": 1603121871
   }
 }
