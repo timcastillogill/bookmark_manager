@@ -1,19 +1,12 @@
 require 'sinatra/base'
-require './lib/bookmark_list'
+require './lib/bookmarks'
 
 class BookmarkManager < Sinatra::Base
-
   enable :sessions
-
-  get '/' do
-    'Bookmark Manager'
-  end
-
   get '/bookmarks' do
-    session[:bookmarks] = BookmarkList.new
-    erb :index
+    @bookmarks = Bookmark.all
+    erb :'bookmarks/index'
   end
-
   
   run! if app_file == $0
 end
