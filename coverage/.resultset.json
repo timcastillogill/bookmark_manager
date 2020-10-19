@@ -1,7 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rebekahgalliano/Projects/Makers/WK4/bookmarks-pairing/spec/features/view_bookmarks_spec.rb": {
+      "/Users/kcthomas/Makers/projects/bookmarks/spec/features/test_infrastructure_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/kcthomas/Makers/projects/bookmarks/spec/features/view_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -12,6 +22,6 @@
         ]
       }
     },
-    "timestamp": 1603120618
+    "timestamp": 1603121290
   }
 }
