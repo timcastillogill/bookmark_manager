@@ -10,3 +10,5 @@ Object | Behaviour
 ------ | ---------
 pages | save
 bookmarks | list, show
+
+![diagram for first user story](https://i.imgur.com/OCZvWaH.png)
