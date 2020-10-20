@@ -10,4 +10,10 @@ describe Bookmark do
       expect(bookmarks).to include("https://www.netflix.com")
     end
   end
+
+  context 'tests database connection' do
+    it 'returns successfully loaded database' do
+      expect { Bookmark.new('bookmark_manager') }.to output("Successfully loaded database\n").to_stdout
+    end  
+  end
 end
