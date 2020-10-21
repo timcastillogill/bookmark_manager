@@ -11,6 +11,10 @@ Object | Behaviour
 pages | save
 bookmarks | list, show
 
+As a user,
+So I can easily revist a website I've found,
+I'd like to add a bookmark.
+
 ![diagram for first user story](https://i.imgur.com/OCZvWaH.png)
 
 Getting started:
