@@ -8,13 +8,13 @@ class BookmarkManager < Sinatra::Base
     erb :'bookmarks/index'
   end
 
-  get '/addbookmarks' do
-    erb(:addbookmark)
+  get '/addbookmark' do
+    erb(:'bookmarks/addbookmark')
   end
 
   post '/addingbookmark' do
-    @addbookmark = Bookmark.add_bookmark([params: new_bookmark])
-    erb : 'bookmarks/index'
+    Bookmark.new_bookmark(params[:Add_Bookmark])
+    redirect '/bookmarks'
   end
 
   run! if app_file == $0
