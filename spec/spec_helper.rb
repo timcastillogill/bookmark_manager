@@ -8,7 +8,13 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
-require_relative 'reset_test_database'
+require 'reset_test_database'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    reset_test_database
+  end
+end
 
 Capybara.app = BookmarkManager
 
@@ -35,11 +41,6 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-RSpec.configure do |config|
-  config.before(:each) do
-    reset_test_database
-  end
-end
 
 
 RSpec.configure do |config|
