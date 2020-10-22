@@ -36,7 +36,9 @@ SimpleCov.start
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 RSpec.configure do |config|
-  reset_test_database
+  config.before(:each) do
+    reset_test_database
+  end
 end
 
 

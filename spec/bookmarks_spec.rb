@@ -3,9 +3,9 @@ require 'bookmarks'
 describe Bookmark do
   describe '.all' do
     it 'returns all bookmarks' do
-      Bookmark.new_bookmark("http://www.destroyallsoftware.com")
-      Bookmark.new_bookmark("http://www.google.com")
-      Bookmark.new_bookmark("http://www.makersacademy.com")
+      Bookmark.new_bookmark("http://www.destroyallsoftware.comU1")
+      Bookmark.new_bookmark("http://www.google.comU2")
+      Bookmark.new_bookmark("http://www.makersacademy.comU3")
 
       bookmarks = Bookmark.all
 
@@ -15,9 +15,9 @@ describe Bookmark do
     end
   end
 
-  describe '#add_bookmark' do
+  describe '#new_bookmark' do
     it 'adds a new bookmark' do
-      addbookmarks = Bookmark.new_bookmark("http://bbc.co.uk/sport")
+      Bookmark.new_bookmark("http://bbc.co.uk/sportU4")
       expect(Bookmark.all).to include("http://bbc.co.uk/sport")
     end
   end
