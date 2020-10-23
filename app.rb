@@ -3,9 +3,14 @@ require './lib/bookmarks'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
+
+  get '/' do
+    erb :index
+  end
+  
   get '/bookmarks' do
     @bookmarks = Bookmark.all
-    erb :'bookmarks/index'
+    erb :'bookmarks/view'
   end
 
   get '/addbookmark' do
@@ -13,7 +18,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/addingbookmark' do
-    Bookmark.new_bookmark(url: params[:url])
+    Bookmark.new_bookmark(url: params[:url], title: params[:title])
     redirect '/bookmarks'
   end
 
