@@ -26,4 +26,13 @@ describe Bookmark do
       expect(bookmark['title']).to eq("BBC Sport")
     end
   end
+
+  describe '#delete_bookmark' do
+    it 'deletes an exiting bookmark' do
+      bookmark = Bookmark.new_bookmark(url: "http://bbc.co.uk/sport", title: 'BBC Sport')
+
+      expect(bookmark.length).to eq nil
+
+    end
+  end
 end

@@ -22,5 +22,9 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end
 
+  delete '' do
+
+  end
+
   run! if app_file == $0
 end

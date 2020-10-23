@@ -23,3 +23,14 @@ feature 'Adding bookmarks' do
     expect(page).to have_link('BBC Sport', href: "http://bbc.co.uk/sport")
   end
 end
+
+feature 'Deleting bookmarks' do
+  scenario 'bookmarks page' do
+    visit '/addbookmark'
+    fill_in('url', with: 'http://bbc.co.uk/sport')
+    fill_in('title', with: 'BBC Sport')
+    visit '/bookmarks'
+    click_button "Delete"
+    expect(page).to_not have_content('BBC Sport')
+  end
+end
