@@ -1,17 +1,20 @@
-require 'bookmarks'
+require_relative './../lib/bookmarks'
 
 describe Bookmark do
+    before :each do
+      reset_test_database
+    end
   describe '.all' do
     it 'returns all bookmarks' do
+      
       Bookmark.new_bookmark(url: "http://www.destroyallsoftware.com", title: 'Destroy All Software')
       Bookmark.new_bookmark(url: "http://www.google.com", title: 'Google')
       Bookmark.new_bookmark(url: "http://www.makersacademy.com", title: 'Makers')
 
       bookmarks = Bookmark.all
-
-      expect(bookmarks).to include("http://www.destroyallsoftware.com")
-      expect(bookmarks).to include("http://www.google.com")
-      expect(bookmarks).to include("http://www.makersacademy.com")
+      
+      expect(bookmarks.first.title).to include("Destroy All Software")
+      expect(bookmarks.length).to eq 3
     end
   end
 
